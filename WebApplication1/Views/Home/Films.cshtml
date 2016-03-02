@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title>Любимые фильмы</title>
+</head>
+<body>
+    <div style='text-align: center'>
+        <h2><FONT COLOR="#0000CD">Мои любимые фильмы</FONT></h2>
+    </div>
+    <div>
+        <ul>
+            @foreach (var f in Model)
+            {
+                <li>
+                    <B>Название: </B>@(f.Name)<BR> 
+                    <B>Описание: </B>@(f.Description) <BR> 
+                    <B>Любимый персонаж: </B>@(f.FavChar) <BR>
+                    <a href="@(f.SSka)"><IMG SRC="@(f.Poster)" HEIGHT="500"></a>
+                </li>
+            }
+        </ul>
+    </div>
+    </body>
+</html>
